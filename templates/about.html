@@ -1,0 +1,87 @@
+{% include"header.html" %}
+
+<!-- Page Header -->
+<header class="masthead" style="background-image: url({{ url_for('static', filename='img/bg-img-about.jpg') }})">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="page-heading">
+          <h1>About Me</h1>
+          <span class="subheading">Hi, This is Ramesh.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<!--About Me-->
+<div id="carouselExampleIndicators" class="carousel slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="container-fluid carousel-item active">
+      <div class="carousel-display">
+        <img src="{{ url_for('static', filename='img/profile.jpg') }}" class="profile" alt="a photo">
+        <p class="carousel-text">I am currently a student majoring computing at Cardiff University</p>
+        <p>,</p>
+        <p class="carousel-text">Coding, Cooking, and Cricket Are My Favourite Things.</p>
+        <p>,</p>
+        <p class="carousel-text">Music Is My Escape and Reading is My Addiction </p>
+        </div>
+    </div>
+    <div class="container-fluid carousel-item">
+      <div class="carousel-display">
+        <img src="{{ url_for('static', filename='img/my_auditor.png') }}" class="profile" alt="programming photo">
+        <p>I was a Bussiness Devlopment Assosiate in Byju's and worked with Customers from India.</p>
+        <p>,</p>
+        <p>I'm a person with good interpersonal skills which helped me to contibute more towards my organization.</p>
+        <p>,</p>
+        <p>Served as an enthusiastic Sales Associate to reach monthly targets worth 2000 GBP.</p>
+      </div>
+    </div>
+    <div class="container-fluid carousel-item">
+      <div class="carousel-display">
+        <img src="{{ url_for('static', filename='img/my_programmer.png') }}" class="profile" alt="programming photo">
+        <p>I am a future Web developer💪</p>
+        <h5>Skills and tech label: </h5>
+        <button type="button" class="btn btn-outline-secondary card-link" disabled>Javascript, Python, JAVA</button>
+        <button type="button" class="btn btn-outline-secondary card-link" disabled>　 React , Flask, MySQL, AWS 　</button>
+        <h5>Recent projects:</h5>
+        <div class="row">
+          <div class="col-sm-6 mb-3 mb-sm-0">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Automated Assessment Tool </h5>
+                <p class="card-text">Automatic assessment of the tests taken by students during the study. </p>
+                <a href="https://github.com/SudduRamesh/AAT" class="btn btn-primary card-link">View the repo</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 mb-3 mb-sm-0">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Portfolio</h5>
+                <p class="card-text">build a Simple Portfolio</p>
+                <a href="https://github.com/SudduRamesh/portfolio" class="btn btn-primary card-link">View the repo</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+{% include"footer.html" %}
