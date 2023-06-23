@@ -1,4 +1,4 @@
-import os
+
 from flask import Flask, render_template, request, redirect, url_for, flash, abort, send_from_directory
 from flask_bootstrap import Bootstrap
 from flask_ckeditor import CKEditor
@@ -17,12 +17,12 @@ from flask_mail import Mail, Message
 
 # Create APP
 app = Flask(__name__)
-app.config['SECRET_KEY'] = os.environ.get('START_KEY')
+app.config['SECRET_KEY'] ='your_secret_key'
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 587
 app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USERNAME'] = os.environ.get('MY_EMAIL')
-app.config['MAIL_PASSWORD'] = os.environ.get('EMAIL_PASSWORD')
+app.config['MAIL_USERNAME'] = "sudduramesh371@gmail.com"
+app.config['MAIL_PASSWORD'] ="tnzg jypw kgiy aexq"
 Bootstrap(app)
 CKEditor(app)
 gravatar = Gravatar(app, size=100, rating='g', default='retro', force_lower=False, use_ssl=False, base_url=None)
@@ -33,7 +33,7 @@ mail = Mail(app)
 
 # Connect to DB (if DB exists)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://ramesh_blog_user:G665L7fWOGmuVU2J9dHRWzqOaLp5nhF9@dpg-cia7gnunqql8aljfhod0-a/ramesh_blog'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
