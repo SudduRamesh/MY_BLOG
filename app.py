@@ -1,4 +1,4 @@
-
+import os
 from flask import Flask, render_template, request, redirect, url_for, flash, abort, send_from_directory
 from flask_bootstrap import Bootstrap
 from flask_ckeditor import CKEditor
@@ -33,7 +33,7 @@ mail = Mail(app)
 
 # Connect to DB (if DB exists)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://ramesh_blog_user:G665L7fWOGmuVU2J9dHRWzqOaLp5nhF9@dpg-cia7gnunqql8aljfhod0-a/ramesh_blog'
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('MYSQL_PATH')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
